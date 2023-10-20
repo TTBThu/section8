@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section08</title>
+</head>
+<body>
+    <script>
+        //bài 1
+        let x = prompt("Nhập một số nguyên dương:");
+        if (isNaN(x) || x<0 || !Number.isInteger(parseFloat(x))) {
+            console.log("Vui lòng nhập lại một số nguyên dương");
+        } else {
+            let giai_thua = 1;
+            for (var i = 1; i<= x; i++) {
+                giai_thua *= i;
+            }
+            console.log("Giai thừa của " + x + " là: " + giai_thua);
+        }
+
+        //bài 2
+        let inputSentence = prompt("Nhập vào một câu:");
+        let reversedSentence = ""; // Chuỗi lưu câu đảo ngược
+        for (let i = inputSentence.length - 1; i >= 0; i--) {
+            reversedSentence += inputSentence[i];
+        }
+        console.log("Câu đảo ngược: " + reversedSentence);
+
+        //bài 3
+        let n = prompt("Nhập số nguyên dương n:");
+
+        if (isNaN(n) || n<=0 || n>100 || !Number.isInteger(parseFloat(n))) {
+            console.log("Vui lòng nhập một số nguyên dương n (n≤100) hợp lệ.");
+        } else {
+            let m = Math.floor(parseInt(n));
+            for (let i = 1; i <= m; i++) {
+                let line = '';
+                for (let j = i; j <= i + m - 1; j++) {
+                    line += j + ' ';
+                }
+                console.log(line);
+            }
+        }
+
+        //bài 4
+        var a1 = 0;
+        var a2 = 1;
+        console.log(a1);
+        console.log(a2);
+        for (var i = 2; i < 15; i++) {
+            var b = a1 + a2;
+            console.log(b);
+            a1 = a2;
+            a2 = b;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section08</title>
+</head>
+<body>
+    <script>
+        var number = parseFloat(prompt("Nhập một số nguyên:"));
+        var sum = 0;
+
+        if (isNaN(number) || !Number.isInteger(number)) {
+            console.log("Vui lòng nhập lại");
+        } else{
+            for (var i = 1; i < number; i++) {
+                if (number % i === 0) {
+                    sum += i;
+                }
+            }
+
+            if (sum === number) {
+                console.log(number + " là số hoàn hảo");
+            } else {
+                console.log(number + " không phải là số hoàn hảo");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
